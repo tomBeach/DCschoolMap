@@ -1,2 +1,2 @@
 # DCschoolMap
-Part of a larger data visualization project for 21st Century Schools and DC Public Schools
+Part of a larger data visualization project for the 21st Century School Fund and DC Public Schools
