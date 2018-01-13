@@ -21,7 +21,8 @@ body {
     box-sizing: border-box;
 }
 .row {
-    overflow: visible;
+    width: 100%;
+    /* overflow: visible; */
     /*border: 1px solid rebeccapurple;*/
 }
 .column {
@@ -81,7 +82,7 @@ body {
     float: left;
     display: inline-block;
     margin: 2px;
-    margin-left: 110px;
+    margin-left: 20px;
     font-size: 1em;
     color: #001C2B;
 }
@@ -144,6 +145,7 @@ body {
     font-size: 0.8em;
     line-height: 20px;
     text-decoration: none;
+    color: purple;
 }
 .active:hover {
     background-color: #e08214;
@@ -206,27 +208,11 @@ body {
 #clearButton:hover, #searchButton:hover {
     background-color: orchid ;
 }
-/* .btn-text {
-    line-height: 20px;
-    font-size: 16px;
-    font-weight: bold;
-    text-align: center;
-    color: white;
-} */
 
-
-
-/* ======= containers ======= */
-#toolMap-container {
-    position: absolute;
-    width: 48%;
-    left: 560px;
-    top: 170px;
-    height: 600px;
-}
+/* ======= profile ======= */
 #profile-container {
     /* position: absolute; */
-    display: none;
+    /* display: none; */
     width: 520px;
     height: auto;
     /* left: 0;
@@ -236,6 +222,127 @@ body {
     background-color: rgba(255, 255, 255, 0.9);
     z-index: 9;
 }
+/* #profile-container > tbody, tr {
+    padding: -10px 0;
+    margin: -10px 0;
+}
+#profile-container > tr:nth-child(even) {
+    background-color: #f2f2f2
+}
+#profile {
+    width: 520px;
+    border-collapse: collapse;
+    border: 1px solid firebrick;
+} */
+
+/* ======= profile-banner ======= */
+.profile-banner {
+    position: relative;
+    margin: 0;
+    height: 58px;
+    text-align: left;
+    color: #001C2B;
+    background-color: #D0D8E2;
+}
+.profile-banner > p {
+    width: auto;
+    max-width: 80%;
+    margin: 5px 2px;
+    color: #001C2B;
+}
+.profile-banner > p:nth-of-type(1){
+    font-size: 1em;
+}
+.profile-banner > p:nth-of-type(2) {
+    margin-left: 15px;
+    font-size: 0.7em;
+    color: purple;
+}
+.profile-banner > p:nth-of-type(3) {
+    margin-left: 15px;
+    font-size: 0.7em;
+    color: purple;
+}
+#close-X {
+    float: right;
+    height: 22px;
+    width: 40px;
+    margin-top: -45px;
+    margin-right: 10px;
+    text-align: center;
+    background-color: #8197b1;
+    border-radius: 4px;
+}
+#close-X > p {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    vertical-align: middle;
+    font-size: 12px;
+    color: white;
+}
+#close-X:hover {
+    background-color: orchid ;
+}
+#expendMathP {
+    /*float: right;*/
+    width: 100px;
+    height: 30px;
+    margin-bottom: 10px;
+    /*margin-right: 10px;*/
+}
+
+/* ======= profile table ======= */
+.profile-data {
+    height: 200px;
+    overflow-y: scroll;
+}
+.data-key {
+    width: 220px;
+}
+.data-value {
+    width: 140px;
+}
+.key-text, .value-text {
+    position: relative;
+    padding: 1px 0;
+    margin: 1px 10px;
+    height: 100%;
+    font-weight: 400;
+	font-size: 12px;
+}
+.key-text {
+    text-align: right;
+    color: black;
+}
+.value-text {
+    text-align: left;
+    color: purple;
+}
+a.value-text {
+    text-decoration: none;
+    text-align: left;
+    font-size: 12px;
+    color: black;
+}
+a.value-text:hover {
+    color: purple;
+}
+
+.value-label {
+    color: black;
+}
+
+/* ======= containers ======= */
+#toolMap-container {
+    position: absolute;
+    width: 48%;
+    left: 560px;
+    top: 170px;
+    height: 600px;
+}
+
+
 #chart-container {
     position: absolute;
     width: 520px;
@@ -334,6 +441,11 @@ body {
 
 /* ======= mapCol ======= */
 .mapCol {
+    display: flex;
+    /* display: inline-flex; */
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
     display: -webkit-flex;
     display: -webkit-inline-flex;
     display: -webkit-box;
@@ -342,14 +454,9 @@ body {
     display: -ms-inline-flexbox;
     display: -moz-box;
     display: -moz-inline-box;
-    display: inline-flex;
-    display: flex;
     flex-direction: -webkit-column;
-    flex-direction: column;
     justify-content: -webkit-flex-start;
-    justify-content: flex-start;
     align-items: -webkit-flex-start;
-    align-items: flex-start;
 }
 
 /* ======= main-nav ======= */
@@ -514,137 +621,6 @@ hr {
     color: purple;
 }
 
-/* ======= profile ======= */
-#profile-container > tbody, tr {
-    padding: -10px 0;
-    margin: -10px 0;
-}
-#profile-container > tr:nth-child(even) {
-    background-color: #f2f2f2
-}
-#profile {
-    width: 520px;
-    border-collapse: collapse;
-    border: 1px solid firebrick;
-}
-
-/* ======= profile-banner ======= */
-.profile-banner {
-    position: relative;
-    margin: 0;
-    height: 58px;
-    text-align: left;
-    color: #001C2B;
-    background-color: #D0D8E2;
-    font-family: "Times", serif;
-}
-#profile-banner-left {
-    position: relative;
-    float: left;
-    top: 0;
-    width: 15px;
-    height: 58px;
-    margin: 0;
-}
-#profile-banner-center {
-    position: relative;
-    float: left;
-    top: 0;
-    left: 16px;
-    width: 245px;
-    height: 58px;
-}
-.profile-banner > p {
-    color: #002646;
-}
-
-/* ======= banner contents ======= */
-#close-X {
-    position: relative;
-    display: inline-block;
-    float: left;
-    height: 14px;
-    width: 14px;
-    margin-top: 4px;
-    margin-left: 4px;
-    padding: 0 0 6px 0;
-    text-align: center;
-    background-color: white;
-    border: solid 2px black;
-}
-#close-X > p {
-    display: inline-block;
-    margin: 0;
-    padding: 0;
-    vertical-align: middle;
-    font-size: 12px;
-    color: purple;
-}
-.profile-title {
-    width: 100%;
-    padding: 1px 0;
-    margin: 4px 0 0 26px;
-    font-size: 16px;
-    color: #001C2B;
-}
-.profile-subtitle {
-    display: block;
-    width: 60%;
-    margin: 5px 0 0 34px;
-    font-size: 12px;
-    color: #001C2B;
-}
-.profile-subtitle2 {
-    display: inline-block;
-    width: 60%;
-    margin: -2px 0 0 34px;
-    font-size: 12px;
-    color: #001C2B;
-}
-#expendMathP {
-    /*float: right;*/
-    width: 100px;
-    height: 30px;
-    margin-bottom: 10px;
-    /*margin-right: 10px;*/
-}
-
-/* ======= profile table ======= */
-.data-key {
-    width: 220px;
-}
-.data-value {
-    width: 140px;
-}
-.key-text, .value-text {
-    position: relative;
-    padding: 1px 0;
-    margin: 1px 10px;
-    height: 100%;
-    font-weight: 400;
-	font-size: 12px;
-}
-.key-text {
-    text-align: right;
-    color: black;
-}
-.value-text {
-    text-align: left;
-    color: purple;
-}
-a.value-text {
-    text-decoration: none;
-    text-align: left;
-    font-size: 12px;
-    color: black;
-}
-a.value-text:hover {
-    color: purple;
-}
-
-.value-label {
-    color: black;
-}
 
 /* ======= chart ======= */
 #chart {

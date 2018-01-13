@@ -27,103 +27,101 @@
 	<div class="row content">
 
 		<!-- ======= filters ======= -->
-		<div class="column col-md-12 mapCol">
-            <div id="filter-container">
-                <table id="filters-table">
-					<thead>
-						<tr>
-							<th></th>
-							<th></th>
-							<th></th>
-							<th></th>
-							<th></th>
-						</tr>
-					</thead>
-                    <tr id="drag_bar" class="filters-banner">
-                        <td colspan="5">
-							<p id="filter-title">School Spending Filters</p>
-							<div id='clearButton'><span class='btn-text'>Clear all Filters</span></div>
-                        </td>
-                    </tr>
-					<tr class="spacer-row"></tr>
-                    <tr class="filter-row">
-                        <td class="filter-label">School Sector</td>
-						<td class="filter-spacer"></td>
-                        <td><div id="District"
-							data-filter='District'
-							data-category='agency'
-							data-state='active'
-							class="filter agency active"><a href="#" class="filter-link">District-DCPS</a></div></td>
-						<td><div id="Charter"
-							data-filter='Charter'
-							data-category='agency'
-							data-state='active'
-							class="filter agency active"><a href="#" class="filter-link">Charter-PCS</a></div></td>
-						<td><div id="All"
-							data-filter='All'
-							data-category='agency'
-							data-state='active'
-							class="filter agency active"><a href="#" class="filter-link">Both</a></div></td>
-                    </tr>
-                    <tr class="filter-row">
-                        <td class="filter-label">Grade Level</td>
-						<td class="filter-spacer"></td>
-                        <td><div id="High"
-							data-filter='High'
-							data-category='levels'
-							data-state='active'
-							class="filter levels active"><a href="#" class="filter-link">High</a></div></td>
-                        <td><div id="Middle"
-							data-filter='Middle'
-							data-category='levels'
-							data-state='active'
-							class="filter levels active"><a href="#" class="filter-link">Middle</a></div></td>
-                        <td><div id="Elem"
-							data-filter='Elem'
-							data-category='levels'
-							data-state='active'
-							class="filter levels active"><a href="#" class="filter-link">Elem</a></div></td>
-                    </tr>
-                    <tr class="filter-row">
-                        <td class="filter-label">Boundary</td>
-						<td class="filter-spacer"></td>
-                        <td><div id="Ward"
-							data-filter='Ward'
-							data-category='zones'
-							data-state='active'
-							class="filter zones active"><a href="#" class="filter-link">Ward</a></div></td>
-                        <td><div id="FeederHS"
-							data-filter='FeederHS'
-							data-category='zones'
-							data-state='active'
-							class="filter zones active"><a href="#" class="filter-link">DCPS HS Feeder</a></div></td>
-						<td><div>&nbsp;</div></td>
-                    </tr>
-                    <tr class="years-row">
-                        <td rowspan="3" class="filter-label">Fiscal Years</td>
-						<td rowspan="3" class="filter-spacer"></td>
-						<td colspan="3"><div id="MajorExp9815"
-							data-filter='MajorExp9815'
-							data-category='expend'
-							data-state='active'
-							class="filter expend active"><a href="#" class="filter-link">PAST (FY1998-2015)</a></div></td>
+        <div id="filter-container">
+            <table id="filters-table">
+				<thead>
+					<tr>
+						<th></th>
+						<th></th>
+						<th></th>
+						<th></th>
+						<th></th>
 					</tr>
-                    <tr class="years-row">
-                        <td colspan="3"><div id="spendPlanned"
-							data-filter='spendPlanned'
-							data-category='expend'
-							data-state='active'
-							class="filter expend active"><a href="#" class="filter-link">FUTURE (FY2016-21)</a></div></td>
-					</tr>
-                    <tr class="years-row">
-						<td colspan="3"><div id="spendLifetime"
-							data-filter='spendLifetime'
-							data-category='expend'
-							data-state='active'
-							class="filter expend active"><a href="#" class="filter-link">TOTAL (FY1998-2021)</a></div></td>
-                    </tr>
-                </table>
-            </div>
+				</thead>
+                <tr id="drag_bar" class="filters-banner">
+                    <td colspan="5">
+						<p id="filter-title">School Spending Filters</p>
+						<div id='clearButton'><span class='btn-text'>Clear all Filters</span></div>
+                    </td>
+                </tr>
+				<tr class="spacer-row"></tr>
+                <tr class="filter-row">
+                    <td class="filter-label">School Sector</td>
+					<td class="filter-spacer"></td>
+                    <td><div id="District"
+						data-filter='District'
+						data-category='agency'
+						data-state='active'
+						class="filter agency active"><a href="#" class="filter-link">District-DCPS</a></div></td>
+					<td><div id="Charter"
+						data-filter='Charter'
+						data-category='agency'
+						data-state='active'
+						class="filter agency active"><a href="#" class="filter-link">Charter-PCS</a></div></td>
+					<td><div id="All"
+						data-filter='All'
+						data-category='agency'
+						data-state='active'
+						class="filter agency active"><a href="#" class="filter-link">Both</a></div></td>
+                </tr>
+                <tr class="filter-row">
+                    <td class="filter-label">Grade Level</td>
+					<td class="filter-spacer"></td>
+                    <td><div id="High"
+						data-filter='High'
+						data-category='levels'
+						data-state='active'
+						class="filter levels active"><a href="#" class="filter-link">High</a></div></td>
+                    <td><div id="Middle"
+						data-filter='Middle'
+						data-category='levels'
+						data-state='active'
+						class="filter levels active"><a href="#" class="filter-link">Middle</a></div></td>
+                    <td><div id="Elem"
+						data-filter='Elem'
+						data-category='levels'
+						data-state='active'
+						class="filter levels active"><a href="#" class="filter-link">Elem</a></div></td>
+                </tr>
+                <tr class="filter-row">
+                    <td class="filter-label">Boundary</td>
+					<td class="filter-spacer"></td>
+                    <td><div id="Ward"
+						data-filter='Ward'
+						data-category='zones'
+						data-state='active'
+						class="filter zones active"><a href="#" class="filter-link">Ward</a></div></td>
+                    <td><div id="FeederHS"
+						data-filter='FeederHS'
+						data-category='zones'
+						data-state='active'
+						class="filter zones active"><a href="#" class="filter-link">DCPS HS Feeder</a></div></td>
+					<td><div>&nbsp;</div></td>
+                </tr>
+                <tr class="years-row">
+                    <td rowspan="3" class="filter-label">Fiscal Years</td>
+					<td rowspan="3" class="filter-spacer"></td>
+					<td colspan="3"><div id="MajorExp9815"
+						data-filter='MajorExp9815'
+						data-category='expend'
+						data-state='active'
+						class="filter expend active"><a href="#" class="filter-link">PAST (FY1998-2015)</a></div></td>
+				</tr>
+                <tr class="years-row">
+                    <td colspan="3"><div id="spendPlanned"
+						data-filter='spendPlanned'
+						data-category='expend'
+						data-state='active'
+						class="filter expend active"><a href="#" class="filter-link">FUTURE (FY2016-21)</a></div></td>
+				</tr>
+                <tr class="years-row">
+					<td colspan="3"><div id="spendLifetime"
+						data-filter='spendLifetime'
+						data-category='expend'
+						data-state='active'
+						class="filter expend active"><a href="#" class="filter-link">TOTAL (FY1998-2021)</a></div></td>
+                </tr>
+            </table>
 
 			<div id="filters-selections"><h2>your filters</h2></div>
 			<div id="toolMap-container"></div>

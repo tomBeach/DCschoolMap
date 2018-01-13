@@ -310,7 +310,7 @@ function clearProfileChart() {
         $("#profile-container").fadeOut( "fast", function() {
             console.log("*** FADEOUT profile-container ***");
         });
-        $("#profile").remove();
+        $("#profile-container").children().remove();
     }
 }
 
@@ -631,15 +631,17 @@ function makeSchoolProfile(schoolsCollectionObj, zonesCollectionObj, displayObj,
     // Future spending per student         == TotalAllotandPlan1621perMaxOcc
     // Future spending per GSF             == TotalAllotandPlan1621perGSF
 
-    var htmlString = "<table id='profile'>";
-    htmlString += "<tr><td class='profile-banner' colspan=2>";
-    htmlString += "<div id='close-X'><p>X</p></div>";
+    var htmlString = "<div class='profile-banner'>";
     htmlString += "<p class='profile-title'>" + itemName + "</p>";
     htmlString += "<p class='profile-subtitle'>" + cleanedSchoolData.schoolAddress + "</p>";
     htmlString += "<p class='profile-subtitle2'>Ward " + cleanedSchoolData.Ward + " / " + cleanedSchoolData.schoolLevel + " / ";
     htmlString += "HS Feeder: " + cleanedSchoolData.FeederHS +  "</p>";
     // htmlString += displayObj.makeMathSelect(displayObj.expendMathMenu, "profile");
-    htmlString += "</td></tr>";
+    htmlString += "<div id='close-X'><p>Close</p></div>";
+    htmlString += "</div>";
+
+    htmlString += "<div class='profile-data'>";
+    htmlString += "<table id='profile'>";
 
     // Enrollment (2014-15)                == Total_Enrolled
     htmlString += "<tr><td class='data-key'><p class='key-text'>Enrollment (2014-15)</p></td>";
@@ -706,6 +708,7 @@ function makeSchoolProfile(schoolsCollectionObj, zonesCollectionObj, displayObj,
     htmlString += "<td class='data-value'><p id='profileSpendPlanned' class='value-text'>" + TotalAllotandPlan1621perGSF + TotalAllotandPlan1621perGSFSpan + "</p></td></tr>";
 
     htmlString += "</table>";
+    htmlString += "</div>";
 
     // == remove previous chart or profile html if any
     if ($('#chart-container').find('#chart').length) {
@@ -717,7 +720,7 @@ function makeSchoolProfile(schoolsCollectionObj, zonesCollectionObj, displayObj,
         $("#legend").remove();
     }
     if ($('#profile-container').find('#profile').length) {
-        $("#profile").remove();
+        $("#profile-container").children().remove();
         $("#profile-container").append(htmlString);
     } else {
         $("#profile-container").append(htmlString);
@@ -778,7 +781,7 @@ function multiSchoolProfile(schoolsCollectionObj, zonesCollectionObj, displayObj
         $("#legend").remove();
     }
     if ($('#profile-container').find('#profile').length) {
-        $("#profile").remove();
+        $("#profile-container").children().remove();
         $("#profile-container").append(htmlString);
     } else {
         $("#profile-container").append(htmlString);
