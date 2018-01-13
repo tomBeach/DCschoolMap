@@ -1,59 +1,9 @@
-
-/* ======= general ======= */
-body {
-    /*font-family:"Ariel", sans-serif;*/
-    font-family: "HelveticaNeue","Helvetica Neue",Helvetica,Arial,sans-serif;
-}
-hr {
-  margin-top: 40px;
-  margin-bottom: 40px;
-}
-
-/*
-header: dark blue: #002646
-header: black: #001C2B
-sidebar: #D0D8E2
-filter: #E7ECF2 (active)
-#002646 #193b58 #32516a #4c677d #667c90 #7f92a2 #99a8b5 #b2bdc7 #ccd3da #e5e9ec #ffffff */
-
-/* ======= rows columns ======= */
-.row, .column {
-    box-sizing: border-box;
-}
-.row {
-    overflow: visible;
-    /*border: 1px solid rebeccapurple;*/
-}
-.column {
-    float: left;
-    /*border: 1px solid Tomato;*/
-}
-
-/* ======= columns ======= */
-.col-md-1 { width: 8.333%; }
-.col-md-2 { width: 16.66%; }
-.col-md-3 { width: 25%; }
-.col-md-4 { width: 33.33%; }
-.col-md-5 { width: 41.66%; }
-.col-md-6 { width: 50%; }
-.col-md-7 { width: 58.33%; }
-.col-md-8 { width: 66.66%; }
-.col-md-9 { width: 75%; }
-.col-md-10 { width: 83.33%; }
-.col-md-11 { width: 91.66%; }
-.col-md-12 { width: 100%; }
-
-[class*="col-"] {
-    background-color: #fff;
-}
-
-/* ======= containers ======= */
 #filter-container {
-    position: absolute;
+    /* position: absolute; */
     width: 520px;
     height: auto;
-    top: 110px;
-    left: 0;
+    /* top: 110px;
+    left: 0; */
     background-color: #D0D8E2;
     border: 1px solid #002646;
     z-index:99;
@@ -101,7 +51,7 @@ filter: #E7ECF2 (active)
 /* ======= legend ======= */
 #legend {
     position: absolute;
-    /* font-family: "Times", serif; */
+    font-family: "Times", serif;
     left: 560px;
     top: 510px;
     background-color: white;
@@ -180,7 +130,7 @@ td {
 .filters-banner {
     height: 36px;
     text-align: center;
-    /* font-family: "Times", serif; */
+    font-family: "Times", serif;
     background-color: white;
 }
 #filter-title, #filter-subtitle {
@@ -223,7 +173,7 @@ td {
 .filter-label {
     width: 90px;
     padding-right: 6px;
-    /* font-family: "Times", serif; */
+    font-family: "Times", serif;
     font-size: 14px;
     text-align: right;
 }
@@ -243,7 +193,7 @@ td {
     font-size: 14px;
     line-height: 30px;
     text-decoration: none;
-    /* font-family: "Times", serif; */
+    font-family: "Times", serif;
 }
 .active:hover {
     background-color: #e08214;

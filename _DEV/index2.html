@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <meta name="author" content="tombeach">
+    <meta name="description" content="DCPS school data mapping and filter tool">
+
+	<!-- ======= ======= ======= styles ======= ======= ======= -->
+	<title>DCPS MapTool</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css">
+	<link rel="stylesheet" href="css/jquery-ui.structure.min.css" type="text/css">
+	<link rel="stylesheet" href="css/jquery-ui.theme.min.css" type="text/css">
+	<link rel="stylesheet" href="css/style.css" type="text/css">
+
+</head>
+<body>
+
+<!-- ======= ======= ======= header ======= ======= ======= -->
+<div id="page-wrap" class="container">
+
+	<div id="left-section" class="container">
+		<div id="menu-box">
+
+			<!-- ======= header ======= -->
+			<div id="header-box">
+				<div>
+					<p>Filter Controls</p>
+				</div>
+				<div>
+					<button>clear</button>
+				</div>
+			</div>
+
+			<!-- ======= filters ======= -->
+			<div id="filter-box">
+				<table>
+					<thead>
+						<tr>
+							<th></th>
+							<th></th>
+							<th></th>
+							<th></th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+					</tbody>
+				</table>
+
+			</div>
+
+			<!-- ======= selectors ======= -->
+			<div id="selector-box">
+				<select id="schoolSelect" name="">
+					<option value=""></option>
+					<option value="">testing with a long school name that might extend beyond the box</option>
+				</select>
+				<input id="schoolSearch" type="text">
+				<input id="searchBtn" type="button" value="search">
+			</div>
+
+			<!-- ======= info text ======= -->
+			<div id="info-box">
+
+			</div>
+		</div>
+	</div>
+
+	<div id="right-section" class="container">
+
+	</div>
+
+</div>
+
+<!-- ======= ======= ======= scripts ======= ======= ======= -->
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script type="text/javascript" src="jquery-ui-1.11.4.custom/jquery-ui.js"></script>
+<!-- <script type="text/javascript" src="jquery-ui.min.js"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBkBjmogOyMcL5_QVtayKZ_X85rSQAf3BE&libraries=visualization"></script>
+<script type="text/javascript" src="underscore.js"></script>
+<script type="text/javascript" src="d3graphs.js"></script>
+<script type="text/javascript" src="processText.js"></script>
+<script type="text/javascript" src="mapFunctions.js"></script>
+<script type="text/javascript" src="utilities.js"></script>
+<script type="text/javascript" src="script.js"></script>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+	    console.log('jQuery loaded');
+	    console.log('document ready');
+		var fs = initApp("toolMap");
+	});
+</script>
+
+</body>
+</html>
