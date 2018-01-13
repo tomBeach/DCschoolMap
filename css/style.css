@@ -1,20 +1,20 @@
 
-/* ======= general ======= */
-body {
-    /*font-family:"Ariel", sans-serif;*/
-    font-family: "HelveticaNeue","Helvetica Neue",Helvetica,Arial,sans-serif;
-}
-hr {
-  margin-top: 40px;
-  margin-bottom: 40px;
-}
-
 /*
 header: dark blue: #002646
 header: black: #001C2B
 sidebar: #D0D8E2
 filter: #E7ECF2 (active)
 #002646 #193b58 #32516a #4c677d #667c90 #7f92a2 #99a8b5 #b2bdc7 #ccd3da #e5e9ec #ffffff */
+
+/* ======= general ======= */
+body {
+    /*font-family:"Ariel", sans-serif;*/
+    font-family: "HelveticaNeue","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+/* hr {
+  margin-top: 40px;
+  margin-bottom: 40px;
+} */
 
 /* ======= rows columns ======= */
 .row, .column {
@@ -47,17 +47,130 @@ filter: #E7ECF2 (active)
     background-color: #fff;
 }
 
-/* ======= containers ======= */
+/* ======= filter menu dimensions ======= */
 #filter-container {
-    position: absolute;
     width: 520px;
     height: auto;
-    top: 110px;
-    left: 0;
     background-color: #D0D8E2;
-    border: 1px solid #002646;
     z-index:99;
 }
+#filters-table {
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+    color: #001C2B;
+}
+#filters-table > thead > tr > th {
+    background-color: #c0cbd8;
+}
+#filters-table > thead > tr > th:nth-of-type(1) {
+    width: 100px;
+}
+#filters-table > thead > tr > th:nth-of-type(3),
+#filters-table > thead > tr > th:nth-of-type(4),
+#filters-table > thead > tr > th:nth-of-type(5) {
+    width: 140px;
+}
+
+/* ======= filter menu components ======= */
+.filters-banner {
+    height: 36px;
+    background-color: #c0cbd8;
+}
+#filter-title {
+    float: left;
+    display: inline-block;
+    margin: 2px;
+    margin-left: 110px;
+    font-size: 1em;
+    color: #001C2B;
+}
+#clearButton {
+    float: right;
+    display: inline-block;
+    height: 22px;
+    width: 30%;
+    margin-right: 10px;
+    padding-top: 1px;
+    text-align: center;
+    border-radius: 4px;
+    background-color: #8197b1;
+    z-index: 99999;
+}
+#clearButton > span {
+    font-size: 0.8em;
+    color: white;
+}
+
+/* ======= filters ======= */
+.filter-row {
+    width: 100%;
+    height: 30px;
+    background-color: #D0D8E2;
+}
+.years-row {
+    width: 100%;
+    height: 32px;
+    /* padding: 2px; */
+    background-color: #D0D8E2;
+}
+.spacer-row {
+    height: 10px;
+}
+.filter-row > .filter-label, .years-row > .filter-label {
+    padding-right: 6px;
+    font-size: 0.8em;
+    text-align: right;
+}
+.filter-spacer {
+    width: 2px;
+    background-color: #dfe5ec;
+}
+.filter {
+    width: 90%;
+    height: 20px;
+    margin: auto;
+    padding: 0;
+    text-align: center;
+    border-radius: 4px;
+    background-color: #c0cbd8;
+}
+.expend {
+    width: 70%;
+}
+.filter-link {
+    margin: 0;
+    width: 100%;
+    font-size: 0.8em;
+    line-height: 20px;
+    text-decoration: none;
+}
+.active:hover {
+    background-color: #e08214;
+}
+.active:hover > a {
+    color: white;
+}
+.selected {
+    background-color: #002646;
+}
+.selected > a {
+    color: white;
+}
+.selected:hover {
+    background-color: #8073ac;
+}
+.selected:hover > a {
+    color: white;
+}
+.deactivated {
+    background-color: #eee;
+}
+.deactivated > a {
+    color: gray;
+}
+
+/* ======= select and search ======= */
 #filters-selections {
     position: absolute;
     top: 110px;
@@ -67,6 +180,43 @@ filter: #E7ECF2 (active)
     padding: 0 20px 2px 10px;
     background-color: #002646;
 }
+#school-select {
+    position: relative;
+    width: 400px;
+    height: 24px;
+	margin: 10px;
+	padding: 0;
+    z-index: 99;
+}
+#searchButton {
+    display: inline-block;
+    height: 22px;
+    width: 80px;
+    text-align: center;
+    margin-left: 26px;
+    padding-top: 1px;
+    border-radius: 4px;
+    background-color: #8197b1;
+    z-index: 99999;
+}
+#searchButton > span {
+    font-size: 12px;
+    color: white;
+}
+#clearButton:hover, #searchButton:hover {
+    background-color: orchid ;
+}
+/* .btn-text {
+    line-height: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+} */
+
+
+
+/* ======= containers ======= */
 #toolMap-container {
     position: absolute;
     width: 48%;
@@ -75,12 +225,12 @@ filter: #E7ECF2 (active)
     height: 600px;
 }
 #profile-container {
-    position: absolute;
+    /* position: absolute; */
     display: none;
     width: 520px;
     height: auto;
-    left: 0;
-    top: 410px;
+    /* left: 0;
+    top: 410px; */
     border-collapse: collapse;
     border-spacing: 0;
     background-color: rgba(255, 255, 255, 0.9);
@@ -101,7 +251,6 @@ filter: #E7ECF2 (active)
 /* ======= legend ======= */
 #legend {
     position: absolute;
-    /* font-family: "Times", serif; */
     left: 560px;
     top: 510px;
     background-color: white;
@@ -166,109 +315,6 @@ filter: #E7ECF2 (active)
 }
 
 /* ======= filters header ======= */
-#filters-table {
-    width: 100%;
-    text-align: center;
-    border-collapse: collapse;
-    background-color: #D0D8E2;
-    color: #001C2B;
-    /*border-radius: 6px 6px 2px 2px;*/
-}
-td {
-    border: 1px solid #001C2B;
-}
-.filters-banner {
-    height: 36px;
-    text-align: center;
-    /* font-family: "Times", serif; */
-    background-color: white;
-}
-#filter-title, #filter-subtitle {
-    margin: 2px 0 0 150px;
-    color: #001C2B;
-}
-#filter-title {
-    display: inline-block;
-    font-size: 16px;
-}
-#clear-button {
-    display: inline-block;
-    height: 22px;
-    width: 70px;
-    left: 95%;
-    margin-left: 70px;
-    border-radius: 2px 2px 2px 2px;
-    background-color: darkviolet;
-    border: solid 2px black;
-    z-index: 99999;
-}
-#clear-button:hover {
-    background-color: orchid ;
-}
-.btn-text {
-    line-height: 20px;
-    font-size: 16px;
-    font-weight: bold;
-    text-align: center;
-    color: white;
-}
-
-/* ======= filters ======= */
-.filter-row {
-    width: 100%;
-    height: 100%;
-    padding: 2px;
-    background-color: #D0D8E2;
-}
-.filter-label {
-    width: 90px;
-    padding-right: 6px;
-    /* font-family: "Times", serif; */
-    font-size: 14px;
-    text-align: right;
-}
-.filter {
-    position: relative;
-    height: 100%;
-    margin: auto;
-    padding: 0 2px;
-    text-align: center;
-    /*border-radius: 25px;*/
-    background-color: #D0D8E2;
-}
-.filter-link {
-    margin: 0;
-    width: 100%;
-    height: 100%;
-    font-size: 14px;
-    line-height: 30px;
-    text-decoration: none;
-    /* font-family: "Times", serif; */
-}
-.active:hover {
-    background-color: #e08214;
-}
-.active:hover > a {
-    color: white;
-}
-.selected {
-    background-color: #002646;
-}
-.selected > a {
-    color: white;
-}
-.selected:hover {
-    background-color: #8073ac;
-}
-.selected:hover > a {
-    color: white;
-}
-.deactivated {
-    background-color: #eee;
-}
-.deactivated > a {
-    color: gray;
-}
 
 /* ======= buttons ======= */
 #zone-school-button {
@@ -431,7 +477,6 @@ hr {
 #search {
     position: relative;
     width: 100%;
-    height: 24px;
 	margin: 0;
 	padding: 0;
     z-index: 99;
@@ -442,32 +487,15 @@ hr {
 #searchWindow {
     display: inline-block;
     position: relative;
-    width: 75%;
-    height: 20px;
-    margin-top: 4px;
+    width: 394px;
+    height: 18px;
+    margin-bottom: 4px;
     left: 2%;
     color: purple;
     font: 0.8em Arial, Helvetica, sans-serif;
+    border-radius: 4px;
     z-index: 99;
 }
-#searchButton {
-    display: inline-block;
-    position: relative;
-    width: 50px;
-    height: 30px;
-    margin-left: 15px;
-}
-
-/* ======= select ======= */
-#school-select {
-    position: relative;
-    width: 80%;
-    height: 24px;
-	margin: 20px 10px 10px 10px ;
-	padding: 0;
-    z-index: 99;
-}
-
 
 /* ======= mouseover ======= */
 #mouseover-text {

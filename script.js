@@ -166,7 +166,7 @@ function initApp(presetMode) {
         // console.log("makeSearchDisplay");
         var searchHtml = "<div id='search' class='category'>";
         searchHtml += "<input id='searchWindow' type='text' placeholder='  school name'/ >";
-        searchHtml += "<input type='button' id='searchButton' value='search'/ ></div>";
+        searchHtml += "<div id='searchButton'><span class='btn-text'>Search</span></div></div>";
         return searchHtml;
     }
 
@@ -212,12 +212,12 @@ function initApp(presetMode) {
         console.log("activateClearButton");
 
         var self = this;
-        $("#clear-button").fadeIn( "slow", function() {
+        $("#clearButton").fadeIn( "slow", function() {
             // console.log("*** FADEIN ***");
         });
 
         // ======= ======= ======= selectFilter ======= ======= =======
-        $("#clear-button").off("click").on("click", function(event){
+        $("#clearButton").off("click").on("click", function(event){
             console.log("\n======= clear ======= ");
 
             // == clear menus (html) and filters (displayObj)

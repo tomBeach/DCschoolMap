@@ -132,7 +132,7 @@ td {
     display: inline-block;
     font-size: 16px;
 }
-#clear-button {
+#clearButton {
     display: inline-block;
     height: 22px;
     width: 70px;
@@ -150,7 +150,7 @@ td {
     text-align: center;
     color: white;
 }
-#clear-button:hover {
+#clearButton:hover {
     background-color: orchid ;
 }
 .filter-row {

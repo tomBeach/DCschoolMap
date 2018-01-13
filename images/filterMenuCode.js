@@ -107,12 +107,12 @@ Display.prototype.activateClearButton = function() {
     console.log("activateClearButton");
 
     var self = this;
-    $("#clear-button").fadeIn( "slow", function() {
+    $("#clearButton").fadeIn( "slow", function() {
         console.log("*** FADEIN ***");
     });
 
     // ======= ======= ======= selectFilter ======= ======= =======
-    $("#clear-button").off("click").on("click", function(event){
+    $("#clearButton").off("click").on("click", function(event){
         console.log("\n======= clear ======= ");
 
         // == clear menus (html) and filters (displayObj)
@@ -528,7 +528,7 @@ function displayFoundSchool(foundDataArray) {
             <tr id="drag_bar" class="filters-banner">
                 <td class="title-text" colspan="4">
                     <p id="filter-title">filters</p>
-                    <div id='clear-button'><span class='btn-text'>clear</span></div>
+                    <div id='clearButton'><span class='btn-text'>clear</span></div>
                 </td>
             </tr>
             <tr class="filter-row">
