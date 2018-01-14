@@ -1,20 +1,21 @@
 
 /*
-header: dark blue: #002646
-header: black: #001C2B
-sidebar: #D0D8E2
-filter: #E7ECF2 (active)
-#002646 #193b58 #32516a #4c677d #667c90 #7f92a2 #99a8b5 #b2bdc7 #ccd3da #e5e9ec #ffffff */
+== header ==
+dark blue: #002646
+dark background: #001C2B (dark blue)
+== filter ==
+main background: #D0D8E2 (light blue)
+header background: #c0cbd8 (light blue darken)
+filter button: #E7ECF2 (active)
+default text color: #001C2B (dark blue)
+== map gradient ==
+#002646 #193b58 #32516a #4c677d #667c90 #7f92a2 #99a8b5 #b2bdc7 #ccd3da #e5e9ec #ffffff
+*/
 
 /* ======= general ======= */
 body {
-    /*font-family:"Ariel", sans-serif;*/
     font-family: "HelveticaNeue","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
-/* hr {
-  margin-top: 40px;
-  margin-bottom: 40px;
-} */
 
 /* ======= rows columns ======= */
 .row, .column {
@@ -22,12 +23,9 @@ body {
 }
 .row {
     width: 100%;
-    /* overflow: visible; */
-    /*border: 1px solid rebeccapurple;*/
 }
 .column {
     float: left;
-    /*border: 1px solid Tomato;*/
 }
 
 /* ======= columns ======= */
@@ -48,7 +46,7 @@ body {
     background-color: #fff;
 }
 
-/* ======= filter menu dimensions ======= */
+/* ======= filter menu structure ======= */
 #filter-container {
     width: 520px;
     height: auto;
@@ -60,9 +58,6 @@ body {
     text-align: center;
     border-collapse: collapse;
     color: #001C2B;
-}
-#filters-table > thead > tr > th {
-    background-color: #c0cbd8;
 }
 #filters-table > thead > tr > th:nth-of-type(1) {
     width: 100px;
@@ -112,7 +107,6 @@ body {
 .years-row {
     width: 100%;
     height: 32px;
-    /* padding: 2px; */
     background-color: #D0D8E2;
 }
 .spacer-row {
@@ -190,6 +184,34 @@ body {
 	padding: 0;
     z-index: 99;
 }
+#clearButton:hover, #searchButton:hover {
+    background-color: orchid ;
+}
+
+/* ======= search ======= */
+#search {
+    position: relative;
+    width: 100%;
+	margin: 0;
+    margin-bottom: 10px;
+	padding: 0;
+    z-index: 99;
+}
+.searchText {
+    width: 15%;
+}
+#searchWindow {
+    display: inline-block;
+    position: relative;
+    width: 394px;
+    height: 18px;
+    margin-bottom: 4px;
+    left: 2%;
+    color: purple;
+    font: 0.8em Arial, Helvetica, sans-serif;
+    border-radius: 4px;
+    z-index: 99;
+}
 #searchButton {
     display: inline-block;
     height: 22px;
@@ -205,9 +227,29 @@ body {
     font-size: 12px;
     color: white;
 }
-#clearButton:hover, #searchButton:hover {
-    background-color: orchid ;
+
+/* ======= mouseover ======= */
+#mouseover-text {
+    position: relative;
+    width: 100%;
+    height: 40px;
+    margin: 0;
+	padding: 0;
+    background-color: white;
+    border: solid 2px #D0D8E2;
+    box-sizing: border-box;
 }
+#mouseover-text > h2 {
+    display: block;
+    margin: 10px;
+    font-size: 16px;
+    text-align: center;
+    color: purple;
+}
+
+/* ======= ======= ======= PROFILE ======= ======= ======= */
+/* ======= ======= ======= PROFILE ======= ======= ======= */
+/* ======= ======= ======= PROFILE ======= ======= ======= */
 
 /* ======= profile container ======= */
 #profile-container {
@@ -262,13 +304,6 @@ body {
 #close-X:hover {
     background-color: orchid ;
 }
-#expendMathP {
-    /*float: right;*/
-    width: 100px;
-    height: 30px;
-    margin-bottom: 10px;
-    /*margin-right: 10px;*/
-}
 
 /* ======= profile table ======= */
 #profile-data {
@@ -315,10 +350,154 @@ a.value-text {
 a.value-text:hover {
     color: purple;
 }
-
 .value-label {
     color: black;
 }
+
+/* ======= ======= ======= CHART ======= ======= ======= */
+/* ======= ======= ======= CHART ======= ======= ======= */
+/* ======= ======= ======= CHART ======= ======= ======= */
+
+/* ======= container ======= */
+#chart-container {
+    width: 520px;
+    height: auto;
+    margin: 0;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-sizing: border-box;
+    z-index: 9;
+}
+
+/* ======= chart ======= */
+#chart {
+    position: relative;
+    height: auto;
+    margin: 0;
+    left: 0;
+    border: 1px solid #002646;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+.title-container {
+    float: left;
+    width: 78%;
+    text-align: center;
+}
+#chart-title {
+    padding: 1px 0;
+    margin: 1px 10px;
+    font-size: 16px;
+    color: #001C2B;
+}
+#chart-subtitle {
+    padding: 1px 0;
+    margin: 1px 10px;
+    font-size: 12px;
+    color: #001C2B;
+}
+#expendMathC, #expendMathP {
+    float: right;
+    height: 24px;
+    width: 100px;
+    margin-top: 16px;
+    margin-right: 10px;
+    text-align: center;
+    background-color: #8197b1;
+    border-radius: 4px;
+}
+.submenu-default {
+    margin: 0;
+    padding: 0;
+    line-height: 12px;
+    font-size: 12px;
+    color: red;
+    background-color: white;
+}
+#sub-nav-container {
+    position: relative;
+    display: inline-block;
+    float: left;
+    height: 30px;
+    /*width: 100px;*/
+    margin-top: 2px;
+    margin-left: 5px;
+    line-height: 16px;
+    font-size: 12px;
+    background-color: white;
+    border: solid 2px black;
+}
+#sub-nav-container > .sub-nav-list {
+    display: none;
+	list-style: none;
+	position: relative;
+    /*width: 100%;*/
+    height: 95%;
+	margin: 0;
+	padding: 0;
+    z-index: 999;
+}
+#sub-nav-container > .sub-nav-list li {
+    position: relative;
+    /*width: 100%;*/
+    height: 90%;
+	margin: 2px 0;
+    background-color: gray;
+}
+#sub-nav-container > .sub-nav-list a {
+    display: inline-block;
+    /*width: 100%;*/
+    height: 100%;
+    margin: 0;
+    padding: 5px 0;
+    text-align: center;
+	text-decoration: none;
+	font-weight: 400;
+	font-size: 14px;
+    color: purple;
+	font-family: "HelveticaNeue","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+#sub-nav-container:hover > .sub-nav-list {
+    display: block;
+}
+#sub-nav-container > .sub-nav-list > li:hover > a {
+    color: red;
+	background-color: #ffd9b3;
+}
+
+/* ======= chart contents ======= */
+#chart-message {
+    position: absolute;
+    top: 60px;
+    left: 365px;
+    width: 160px;
+    z-index: 999;
+}
+#chart-message > p {
+    color: red;
+}
+.data-key, .data-value {
+    position: relative;
+    padding: -10px 0;
+    margin: -10px 0;
+    height: 14px;
+    vertical-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+/* ======= d3 ======= */
+.axis path,
+.axis line {
+    fill: none;
+    stroke: black;
+    shape-rendering: crispEdges;
+}
+.axis text {
+    font-family: sans-serif;
+    font-size: 11px;
+}
+
+/* ======= ======= ======= MAP ======= ======= ======= */
+/* ======= ======= ======= MAP ======= ======= ======= */
+/* ======= ======= ======= MAP ======= ======= ======= */
 
 /* ======= containers ======= */
 #toolMap-container {
@@ -329,18 +508,6 @@ a.value-text:hover {
     height: 600px;
 }
 
-
-#chart-container {
-    position: absolute;
-    width: 520px;
-    top: 410px;
-    left: 0;
-    border-collapse: collapse;
-    border-spacing: 0;
-    /*border-radius: 6px 6px 2px 2px;*/
-    background-color: rgba(255, 255, 255, 0.9);
-    z-index: 9;
-}
 
 /* ======= legend ======= */
 #legend {
@@ -567,177 +734,6 @@ hr {
     width: 100%;
 }
 
-/* ======= search ======= */
-#search {
-    position: relative;
-    width: 100%;
-	margin: 0;
-    margin-bottom: 10px;
-	padding: 0;
-    z-index: 99;
-}
-.searchText {
-    width: 15%;
-}
-#searchWindow {
-    display: inline-block;
-    position: relative;
-    width: 394px;
-    height: 18px;
-    margin-bottom: 4px;
-    left: 2%;
-    color: purple;
-    font: 0.8em Arial, Helvetica, sans-serif;
-    border-radius: 4px;
-    z-index: 99;
-}
-
-/* ======= mouseover ======= */
-#mouseover-text {
-    position: relative;
-    width: 100%;
-    height: 40px;
-    margin: 0;
-	padding: 0;
-    background-color: white;
-    border: solid 2px #D0D8E2;
-    box-sizing: border-box;
-}
-#mouseover-text > h2 {
-    display: block;
-    margin: 10px;
-    font-size: 16px;
-    text-align: center;
-    color: purple;
-}
-
-
-/* ======= chart ======= */
-#chart {
-    position: relative;
-    width: 520px;
-    height: auto;
-    margin: 0;
-    left: 0;
-    border: 1px solid #002646;
-    /*box-shadow: 6px 6px 5px #888888;*/
-    /*border-radius: 6px 6px 2px 2px;*/
-    background-color: rgba(255, 255, 255, 0.9);
-}
-.title-container {
-    float: left;
-    width: 78%;
-    text-align: center;
-}
-#chart-title {
-    padding: 1px 0;
-    margin: 1px 10px;
-    font-size: 16px;
-    color: #001C2B;
-}
-#chart-subtitle {
-    padding: 1px 0;
-    margin: 1px 10px;
-    font-size: 12px;
-    color: #001C2B;
-}
-#expendMathC {
-    /*float: right;*/
-    /*width: 100px;*/
-    height: 30px;
-    margin-top: 20px;
-    /*margin-right: 10px;*/
-}
-.submenu-default {
-    margin: 0;
-    padding: 0;
-    line-height: 12px;
-    font-size: 12px;
-    color: red;
-    background-color: white;
-}
-#sub-nav-container {
-    position: relative;
-    display: inline-block;
-    float: left;
-    height: 30px;
-    /*width: 100px;*/
-    margin-top: 2px;
-    margin-left: 5px;
-    line-height: 16px;
-    font-size: 12px;
-    background-color: white;
-    border: solid 2px black;
-}
-#sub-nav-container > .sub-nav-list {
-    display: none;
-	list-style: none;
-	position: relative;
-    /*width: 100%;*/
-    height: 95%;
-	margin: 0;
-	padding: 0;
-    z-index: 999;
-}
-#sub-nav-container > .sub-nav-list li {
-    position: relative;
-    /*width: 100%;*/
-    height: 90%;
-	margin: 2px 0;
-    background-color: gray;
-}
-#sub-nav-container > .sub-nav-list a {
-    display: inline-block;
-    /*width: 100%;*/
-    height: 100%;
-    margin: 0;
-    padding: 5px 0;
-    text-align: center;
-	text-decoration: none;
-	font-weight: 400;
-	font-size: 14px;
-    color: purple;
-	font-family: "HelveticaNeue","Helvetica Neue",Helvetica,Arial,sans-serif;
-}
-#sub-nav-container:hover > .sub-nav-list {
-    display: block;
-}
-#sub-nav-container > .sub-nav-list > li:hover > a {
-    color: red;
-	background-color: #ffd9b3;
-}
-
-/* ======= chart contents ======= */
-#chart-message {
-    position: absolute;
-    top: 60px;
-    left: 365px;
-    width: 160px;
-    z-index: 999;
-}
-#chart-message > p {
-    color: red;
-}
-.data-key, .data-value {
-    position: relative;
-    padding: -10px 0;
-    margin: -10px 0;
-    height: 14px;
-    vertical-align: center;
-    border-bottom: 1px solid #ddd;
-}
-
-/* ======= d3 ======= */
-.axis path,
-.axis line {
-    fill: none;
-    stroke: black;
-    shape-rendering: crispEdges;
-}
-.axis text {
-    font-family: sans-serif;
-    font-size: 11px;
-}
 
 /* ======= jquery selectmenu ======= */
 fieldset {

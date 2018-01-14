@@ -405,12 +405,12 @@ function makeRankChart(zonesCollectionObj, schoolsCollectionObj, displayObj, zon
     // ======= ======= ======= makeChartHtml ======= ======= =======
     function makeChartHtml() {
         console.log("\n----- makeChartHtml -----");
-        var chartHtml = "<table id='chart'>";
-        chartHtml += "<tr><td class='profile-banner' colspan=2>";
-        chartHtml += "<div class='title-container'><p id='chart-title'>data chart</p>";
+
+        var chartHtml = "<div id='profile-banner'>";
+        chartHtml += "<div class='title-container'><p id='chart-title'>&nbsp;</p>";
         chartHtml += "<p id='chart-subtitle'>&nbsp;</p></div>";
         chartHtml += displayObj.makeMathSelect(displayObj.expendMathMenu, "chart");
-        chartHtml += "</td></tr></table>";
+        chartHtml += "</div>";
         return chartHtml;
     }
 
@@ -584,13 +584,13 @@ function makeRankChart(zonesCollectionObj, schoolsCollectionObj, displayObj, zon
         if ($('#chart-container').find('#chart').length) {
             $("#chart").remove();
             $("#chart-container").append(chartHtml);
-            updateChartStyle();
+            // updateChartStyle();
             $("#chart-container").fadeIn( "slow", function() {
                 // console.log("*** FADEIN chart-container ***");
             });
         } else {
             $("#chart-container").append(chartHtml);
-            updateChartStyle();
+            // updateChartStyle();
             $("#chart-container").fadeIn( "slow", function() {
                 // console.log("*** FADEIN chart-container ***");
             });

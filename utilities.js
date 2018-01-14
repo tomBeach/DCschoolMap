@@ -636,7 +636,6 @@ function makeSchoolProfile(schoolsCollectionObj, zonesCollectionObj, displayObj,
     htmlString += "<p class='profile-subtitle'>" + cleanedSchoolData.schoolAddress + "</p>";
     htmlString += "<p class='profile-subtitle2'>Ward " + cleanedSchoolData.Ward + " / " + cleanedSchoolData.schoolLevel + " / ";
     htmlString += "HS Feeder: " + cleanedSchoolData.FeederHS +  "</p>";
-    // htmlString += displayObj.makeMathSelect(displayObj.expendMathMenu, "profile");
     htmlString += "<div id='close-X'><p>Close</p></div>";
     htmlString += "</div>";
 
