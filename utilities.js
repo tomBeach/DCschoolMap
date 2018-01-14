@@ -631,7 +631,7 @@ function makeSchoolProfile(schoolsCollectionObj, zonesCollectionObj, displayObj,
     // Future spending per student         == TotalAllotandPlan1621perMaxOcc
     // Future spending per GSF             == TotalAllotandPlan1621perGSF
 
-    var htmlString = "<div class='profile-banner'>";
+    var htmlString = "<div id='profile-banner'>";
     htmlString += "<p class='profile-title'>" + itemName + "</p>";
     htmlString += "<p class='profile-subtitle'>" + cleanedSchoolData.schoolAddress + "</p>";
     htmlString += "<p class='profile-subtitle2'>Ward " + cleanedSchoolData.Ward + " / " + cleanedSchoolData.schoolLevel + " / ";
@@ -640,7 +640,7 @@ function makeSchoolProfile(schoolsCollectionObj, zonesCollectionObj, displayObj,
     htmlString += "<div id='close-X'><p>Close</p></div>";
     htmlString += "</div>";
 
-    htmlString += "<div class='profile-data'>";
+    htmlString += "<div id='profile-data'>";
     htmlString += "<table id='profile'>";
 
     // Enrollment (2014-15)                == Total_Enrolled
@@ -719,7 +719,7 @@ function makeSchoolProfile(schoolsCollectionObj, zonesCollectionObj, displayObj,
     if ($('#legend-container').find('#legend').length) {
         $("#legend").remove();
     }
-    if ($('#profile-container').find('#profile').length) {
+    if ($('#profile-container').find('#profile-banner').length) {
         $("#profile-container").children().remove();
         $("#profile-container").append(htmlString);
     } else {

@@ -118,12 +118,12 @@ function initApp(presetMode) {
     Display.prototype.makeSearchAndHoverDisplay = function() {
         console.log("makeSearchAndHoverDisplay");
 
-        var filterContainer = ("#filter-container ");
+        // var filterContainer = ("#filter-container ");
         var menuHtml = "";
         this.makeColorLegend();
-        menuHtml += this.makeSearchDisplay();
-        menuHtml += this.makeHoverDisplay();
-        $(filterContainer).append(menuHtml);
+        // menuHtml += this.makeSearchDisplay();
+        // menuHtml += this.makeHoverDisplay();
+        // $(filterContainer).append(menuHtml);
         this.activateSearchButton("searchButton");
         this.activateSearchWindow("searchWindow");
     }
@@ -142,7 +142,8 @@ function initApp(presetMode) {
     Display.prototype.makeSelectBox = function(jsonData) {
         console.log("makeSelectBox");
 
-        var selectHtml = "<select id='school-select'>";
+        // var selectHtml = "<select id='school-select'>";
+        var selectHtml = "";
 
         var nextSchool, nextSchoolName;
         for (var i = 0; i < jsonData.length; i++ ) {
@@ -150,12 +151,13 @@ function initApp(presetMode) {
             nextSchoolName = nextSchool.School;
             selectHtml += "<option value='" + nextSchoolName + "'>" + nextSchoolName + "</option>";
         }
-        selectHtml += "</select>";
+        // selectHtml += "</select>";
 
-        var filterContainer = ("#filter-container ");
+        // var filterContainer = ("#filter-container ");
         var selectBox = $("#filter-container").children("select");
         if (selectBox) {
-            $(filterContainer).append(selectHtml);
+            // $(filterContainer).append(selectHtml);
+            $(selectBox).append(selectHtml);
             this.activateSelectBox();
         }
 
