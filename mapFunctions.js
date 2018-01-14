@@ -51,8 +51,9 @@ function initMap(zonesCollectionObj, displayObj) {
         var zoom = 12;
 
         map = new google.maps.Map(mapContainer, {
-            center: {lat: 38.89, lng: -77.02},
-            minZoom: 11,
+            // center: {lat: 38.89, lng: -77.02},
+            center: {lat: 38.89, lng: -77.03},
+            minZoom: 12,
             maxZoom: 12,
             disableDefaultUI: true,
             disableDoubleClickZoom: true,

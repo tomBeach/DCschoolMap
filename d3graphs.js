@@ -61,8 +61,8 @@ function makeRankChart(zonesCollectionObj, schoolsCollectionObj, displayObj, zon
 
     // ======= chart formatting =======
     var chartPadding = {top: 20, right: 10, bottom: 20, left: 60},
-        chartW = 520 - chartPadding.left - chartPadding.right,       // outer width of chart
-        chartH = 300 - chartPadding.top - chartPadding.bottom;      // outer height of chart
+        chartW = 480 - chartPadding.left - chartPadding.right,       // outer width of chart
+        chartH = 280 - chartPadding.top - chartPadding.bottom;      // outer height of chart
     var yAxisLabel = "left";
 
     // ======= bar formatting =======
