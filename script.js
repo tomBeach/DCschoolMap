@@ -134,6 +134,7 @@ function initApp(presetMode) {
         var legendHtml = "<div id='legend'>";
         legendHtml += "<div><p class='legend-text'>District Schools</p><div class=legend-color-dcps>&nbsp;</div></div>";
         legendHtml += "<div><p class='legend-text'>Charter Schools</p><div class=legend-color-pcs>&nbsp;</div></div>";
+        legendHtml += "<div><p class='legend-text'>Closed Schools</p><div class=legend-color-cl>&nbsp;</div></div>";
         legendHtml += "</div>";
         $("body").append(legendHtml);
     }

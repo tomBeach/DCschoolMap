@@ -116,8 +116,8 @@ function updateChartText(displayObj, subtitle) {
     if (displayObj.displayMode == "storyMap") {
         $('#chart-label').text("");
     }
-    $("#chart-title").text(expendText + " " + mathText);
-    $('#chart-subtitle').text(subtitle);
+    $("#chart-title").text(expendText);
+    $('#chart-subtitle').text(mathText + " " + subtitle);
 
     return [mathText, schoolText, agencyText];
 }
