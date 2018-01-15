@@ -1,5 +1,5 @@
 # DCschoolMap
-This data visualization tool is part of a larger historical analysis project for the 21st Century School Fund and DC Public School system.  Interactive filters allow the user to select past, present and future spending data for schools of varying type and level:
+This data visualization tool is part of a larger historical analysis project for the [21st Century School Fund](http://www.21csf.org/csf-home/) and DC Public School system.  Interactive filters allow the user to select past, present and future spending data for schools of varying type and level:
 
 
 public vs charter
