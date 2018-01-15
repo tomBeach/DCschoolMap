@@ -574,13 +574,12 @@ function makeRankChart(zonesCollectionObj, schoolsCollectionObj, displayObj, zon
     function clearChartContainer(chartHtml) {
         console.log("clearChartContainer");
         // ======= remove previous chart or profile html if any =======
-        if ($('#profile-container').find('#profile').length) {
-            $("#profile").remove();
+        if ($('#profile-container').find('#profile-banner').length) {
+            $("#profile-container").children().remove();
         }
         if ($('#legend-container').find('#legend').length) {
             $("#legend").remove();
         }
-
         if ($('#chart-container').find('#chart').length) {
             $("#chart").remove();
             $("#chart-container").append(chartHtml);

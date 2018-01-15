@@ -273,13 +273,20 @@ function initApp(presetMode) {
         // ======= selectFilter =======
         $(buttonElement).off("click").on("click", function(event){
             console.log("\n======= search =======");
-            findSearchSchool();
+            console.log("$('#searchWindow').val().length:", $('#searchWindow').val().length);
+            if ($('#searchWindow').val().length > 0) {
+                findSearchSchool();
+            } else {
+                $('#mouseover-text').html('<h2>Please enter a school name or use selectbox</h2>')
+            }
         });
         // ======= selectFilter =======
         $( window ).bind('keypress', function(event){
             if ( event.keyCode == 13 ) {
                 console.log("\n======= search =======");
-                findSearchSchool();
+                if ($('#searchWindow').val().length > 0) {
+                    findSearchSchool();
+                }
             }
         });
     }
