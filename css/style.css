@@ -14,7 +14,8 @@ default text color: #001C2B (dark blue)
 
 /* ======= general ======= */
 body {
-    font-family: "HelveticaNeue","Helvetica Neue",Helvetica,Arial,sans-serif;
+    /* font-family: "HelveticaNeue","Helvetica Neue",Helvetica,Arial,sans-serif; */
+    font-family: "Century Gothic", Futura, sans-serif;
 }
 #page-wrap {
     width: 95%;
@@ -402,7 +403,7 @@ body {
 
 /* ======= profile table ======= */
 #profile-data {
-    height: 200px;
+    height: 280px;
     border: 1px solid firebrick;
     overflow-y: scroll;
 }
@@ -467,10 +468,6 @@ a.value-text:hover {
 
 /* ======= chart ======= */
 #chart {
-    /* position: relative;
-    height: auto;
-    margin: 0;
-    left: 0; */
     border: 1px solid #002646;
     background-color: rgba(255, 255, 255, 0.9);
 }
@@ -515,7 +512,6 @@ a.value-text:hover {
     display: inline-block;
     float: left;
     height: 30px;
-    /*width: 100px;*/
     margin-top: 2px;
     margin-left: 5px;
     line-height: 16px;
@@ -527,7 +523,6 @@ a.value-text:hover {
     display: none;
 	list-style: none;
 	position: relative;
-    /*width: 100%;*/
     height: 95%;
 	margin: 0;
 	padding: 0;
@@ -535,14 +530,12 @@ a.value-text:hover {
 }
 #sub-nav-container > .sub-nav-list li {
     position: relative;
-    /*width: 100%;*/
     height: 90%;
 	margin: 2px 0;
     background-color: gray;
 }
 #sub-nav-container > .sub-nav-list a {
     display: inline-block;
-    /*width: 100%;*/
     height: 100%;
     margin: 0;
     padding: 5px 0;
@@ -551,7 +544,8 @@ a.value-text:hover {
 	font-weight: 400;
 	font-size: 14px;
     color: purple;
-	font-family: "HelveticaNeue","Helvetica Neue",Helvetica,Arial,sans-serif;
+	/* font-family: "HelveticaNeue","Helvetica Neue",Helvetica,Arial,sans-serif; */
+    font-family: "Century Gothic", Futura, sans-serif;
 }
 #sub-nav-container:hover > .sub-nav-list {
     display: block;
@@ -620,7 +614,6 @@ svg {
 /* ======= mapCol ======= */
 .mapCol {
     display: flex;
-    /* display: inline-flex; */
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
@@ -668,7 +661,8 @@ svg {
 	font-weight: 700;
 	font-size: 14px;
     color: #333;
-	font-family: "HelveticaNeue","Helvetica Neue",Helvetica,Arial,sans-serif;
+    /* font-family: "HelveticaNeue","Helvetica Neue",Helvetica,Arial,sans-serif; */
+    font-family: "Century Gothic", Futura, sans-serif;
 }
 #main-nav > .nav-list .all-filters {
     position: absolute;
@@ -707,7 +701,8 @@ svg {
 	font-size: 14px;
     color: #333;
     color: purple;
-	font-family: "HelveticaNeue","Helvetica Neue",Helvetica,Arial,sans-serif;
+    /* font-family: "HelveticaNeue","Helvetica Neue",Helvetica,Arial,sans-serif; */
+    font-family: "Century Gothic", Futura, sans-serif;
 }
 #main-nav > .nav-list li.category:hover {
 	background:#ffd9b3;

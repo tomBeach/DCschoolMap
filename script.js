@@ -210,6 +210,26 @@ function initApp(presetMode) {
         return subMenuHtml;
     }
 
+    // ======= ======= ======= activateMapInfo ======= ======= =======
+    Display.prototype.activateMapInfo = function() {
+        console.log("activateMapInfo");
+
+        var infoContainer = $("#mouseover-text").children("h2");
+
+        $("#toolMap-container").off("mouseover").on("mouseover", function(event) {
+            console.log("------- mouseover -------");
+
+            $("#mouseover-text").children("h2").css("visibility", "visible");
+            $(infoContainer).html('Click and drag to move map');
+        });
+
+        $("#toolMap-container").off("mouseout").on("mouseout", function(event) {
+            console.log("------- mouseout -------");
+            $("#mouseover-text").children("h2").css("visibility", "hidden");
+            $(infoContainer).text("&nbsp;");
+        });
+    }
+
     // ======= ======= ======= activateClearButton ======= ======= =======
     Display.prototype.activateClearButton = function() {
         console.log("activateClearButton");
@@ -805,7 +825,9 @@ function initApp(presetMode) {
         console.log("\n----- importSchoolData -----");
 
         var self = this;
-        var url = "https://rawgit.com/codefordc/school-modernization/master/Output%20Data/DCSchools_FY1415_Master_412.csv";
+        // var url = "https://rawgit.com/codefordc/school-modernization/master/Output%20Data/DCSchools_FY1415_Master_412.csv";
+        var url = "Data_Schools/DCSchools_FY1415_Master_412.csv";
+
 
         // ======= get selected data =======
         $.ajax({
@@ -1608,6 +1630,7 @@ function initApp(presetMode) {
     this.jsonData = null;
     displayObj.activateFilterMenus();
     displayObj.activateClearButton();
+    // displayObj.activateMapInfo();
     setMenuState(displayObj.agencyMenu, ["A", "A", "S"]);
     setMenuState(displayObj.zonesMenu, ["S", "A"]);
     schoolsCollectionObj.importSchoolData();
